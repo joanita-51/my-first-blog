@@ -2,11 +2,16 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    photo = models.ImageField(upload_to='recipe_photos/', null=True, blank=True)
+    ingredients_list = models.TextField()
+    instructions = models.TextField()
+    cooking_tips = models.TextField(blank=True, null=True)
+    categories = models.CharField(max_length=50, choices=[('breakfast', 'Breakfast'), ('lunch', 'Lunch'), ('dinner', 'Dinner'), ('desserts', 'Desserts')])  # Add more categories as needed
+    cooking_demonstration_video = models.URLField(blank=True, null=True)
+
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
