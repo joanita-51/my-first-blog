@@ -103,7 +103,52 @@ h2{
     
 }
 
+/* Post list */
+
 .category-info{
     display: flex;
     text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center;
+}
+
+.card {
+    width: 300px; /* Adjust card width */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Simple box shadow */
+    transition: 0.3s; /* Smooth transition for hover effect */
+    margin-bottom: 20px; /* Space below each card */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3); /* Hover effect */
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px; /* Padding inside the card */
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #5E221C;
+}
+
+.card-text {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.card-date {
+    font-size: 0.8em;
+    color: grey;
 }
