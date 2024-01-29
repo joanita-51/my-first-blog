@@ -15,7 +15,6 @@
 }
 
 h1,
-h2,
 h3,
 h4 {
     font-family: 'Lobster', cursive;
@@ -67,4 +66,44 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #C25100;
+}
+
+#title{
+    color: #5E221C;
+    font-size: 100px;
+    font-weight: 200;
+    font-family: 'Lobster', cursive;
+}
+
+.list,.ingredient{
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+.ingredient{
+    font-style: italic;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #5E221C;
+}
+
+.ingredient-border{
+    border: 1px solid #5E221C;
+    border-radius: 20px;
+}
+
+#post-photo{
+    object-fit: cover;
+    object-position: bottom;
+    
+}
+
+.category-info{
+    display: flex;
+    text-align: center;
 }

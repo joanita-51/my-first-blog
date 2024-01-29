@@ -12,7 +12,10 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    ingredients_list = post.ingredients_list.split('-') if post.ingredients_list else []
+    cooking_tips = post.cooking_tips.split('-') if post.cooking_tips else []
+    instructions = post.instructions.split('-') if post.instructions else []
+    return render(request, 'blog/post_detail.html', {'post': post, 'ingredients_list':ingredients_list, 'cooking_tips':cooking_tips, 'instructions':instructions})
 
 def post_new(request):
     if request.method == "POST":
