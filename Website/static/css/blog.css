@@ -1,7 +1,12 @@
+body{
+    background-color: #E8E3E3;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
 .page-header {
-    background-color: #C25100;
+    background-color: #B6A09F;
     margin-top: 0;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     padding: 20px 20px 20px 40px;
 }
 
@@ -9,13 +14,14 @@
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #ffffff;
+    /* color: #ffffff; */
     font-size: 36pt;
     text-decoration: none;
+    color: #000000;
 }
 
+
 h1,
-h2,
 h3,
 h4 {
     font-family: 'Lobster', cursive;
@@ -67,4 +73,115 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #C25100;
+}
+
+#title{
+    color: #5E221C;
+    font-size: 100px;
+    font-weight: 200;
+    font-family: 'Lobster', cursive;
+}
+
+.list,.ingredient{
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+.ingredient{
+    font-style: italic;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #5E221C;
+}
+
+.ingredient-border{
+    border: 1px solid #5E221C;
+    border-radius: 20px;
+}
+
+#post-photo{
+    object-fit: cover;
+    object-position: bottom;
+    
+}
+
+/* Post list */
+
+.category-info{
+    display: flex;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    /* justify-content: center; */
+    text-decoration: none;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    transition: 0.3s; 
+    margin-bottom: 20px; 
+    text-decoration: none;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3); /* Hover effect */
+}
+
+.card-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px; /* Padding inside the card */
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #5E221C;
+}
+
+.card-text {
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.card-date {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.tagline {
+
+    font-size: 1.2em; /* Adjust the font size */
+    margin-top: 10px; /* Add margin for spacing */
+    color: #dfdddd; /* Adjust the color as needed */
+}
+
+/* Additional styles for intro-section */
+.intro-section {
+    padding: 100px 0; /* Adjust padding as needed */
+    margin-bottom: 5rem;
+}
+
+.intro-section h2 {
+    color: #AA7F3F; /* Text color for h2 */
+}
+
+.intro-section p {
+    color: #ecf0f1; /* Text color for p */
 }
