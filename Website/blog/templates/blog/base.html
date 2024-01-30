@@ -8,7 +8,7 @@
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <header class="page-header">
+        <header class="page-header" style="background-color: #B6A09F;">
             <div class="container">
                 {% if user.is_authenticated %}
                     <a href="{% url 'post_new' %}" class="top-menu">
@@ -17,14 +17,14 @@
                     </a>
                     
                 {% endif %}
-                <h1><a href="/">Recopie Cooking Recipe Site</a></h1>
+                <h1 style="    font-size: 36pt; text-decoration: none; color: #000000;"><a href="/">Recopie Cooking Recipe Site</a></h1>
                 <p class="tagline" style="font-size: 1.2em; margin-top: 10px; color: #dfdddd;">Your Ultimate Cooking Guide</p>
 
             </div>
 
         </header>
 
-        <main class="">
+        <main style="background-color: #E8E3E3;">
 
             {% block content %}
             {% endblock %}

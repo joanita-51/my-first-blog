@@ -16,24 +16,24 @@
             </time>
         {% endif %} -->
         <header class="row">
-            <p id="title">{{ post.title }}</p>
+            <p id="title" style="color: #5E221C; font-size: 80px; font-weight: 200; font-family: 'Lobster', cursive;   margin-top: 40px;  margin-bottom: 40px;">{{ post.title }}</p>
             {% if post.photo %}
               <img src="{{ post.photo.url }}" alt="{{ post.title }}" style="object-fit: cover; height: 400px;">
             {% endif %}
         </header>
         <div class="row" style="margin-top: 40px;">
             <div class="col">
-                <h2>Ingredients:</h2>
+                <h2 style="font-size: 25px; font-weight: 500; margin-top: 20px; color: #5E221C;">Ingredients:</h2>
 
                 {% if post.ingredients_list %}
-                <ul class="ingredient-border">
+                <ul class="ingredient-border" style="border: 1px solid #5E221C;  border-radius: 20px; margin-bottom:10px; font-size: 15px;">
                     {% for ingredient in ingredients_list %}
-                    <li class="ingredient">{{ingredient}}</li>
+                    <li class="ingredient" style="font-style: italic;">{{ingredient}}</li>
                     {% endfor %}
                 </ul>
                 {% endif %}
 
-                <h2>Cooking Tips:</h2>
+                <h2 style="font-size: 25px; font-weight: 500; margin-top: 20px; color: #5E221C;">Cooking Tips:</h2>
                 {% if post.cooking_tips %}
                 <ul>
                     {% for tip in cooking_tips %}
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col">
-                <h2>Instructions:</h2>
+                <h2 style="font-size: 25px; font-weight: 500; margin-top: 20px; color: #5E221C;">Instructions:</h2>
 
                 {% if post.instructions %}
                 <ul>
@@ -60,14 +60,14 @@
         <div class="row">
             <div class="col">
             {% if post.cooking_demonstration_video %}
-                <h2>Cooking Demonstration Video</h2>
+                <h2 style="font-size: 25px; font-weight: 500; margin-top: 20px; color: #5E221C;">Cooking Demonstration Video</h2>
                 <iframe width="500" height="215" src="{{ post.cooking_demonstration_video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
               {% endif %}
             </div>
             <div class="col">
                 <div >
-                    <h2>Category:</h2>
+                    <h2 style="font-size: 25px; font-weight: 500; margin-top: 20px; color: #5E221C;">Category:</h2>
                     <p class="category-info">{{ post.categories }}</p>
                 </div>
 
