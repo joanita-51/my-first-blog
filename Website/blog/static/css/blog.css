@@ -125,6 +125,7 @@ h2{
     gap: 40px; 
     /* justify-content: center; */
     text-decoration: none;
+    margin-bottom: 4rem;
 }
 
 .card {
@@ -177,7 +178,7 @@ h2{
 /* Additional styles for intro-section */
 .intro-section {
     padding: 50px 0; /* Adjust padding as needed */
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .intro-section h2 {
@@ -191,3 +192,10 @@ h2{
 .hero{
     display: flex;
 }
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    
+}
+

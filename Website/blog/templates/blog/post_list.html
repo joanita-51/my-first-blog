@@ -23,19 +23,32 @@
     </div>    
 
 
-    <div class="card-container container">
-        {% for post in posts %}
-        <div class="card mb-3">
-            <a href="{% url 'post_detail' pk=post.pk %}" class="text-decoration-none">
-                <img src="{{ post.photo.url }}" class="card-img-top" alt="{{ post.title }}" style="object-fit: cover; height: 200px;">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text">{{ post.categories }}</p>
-                    <span class="card-date">{{ post.published_date }}</span>
-                </div>
-            </a>
-        </div>
-        
+    <div class="container">
+        {% regroup posts by categories as category_list %}
+    
+        {% for category in category_list %}
+            <h2 style="background-color: #BCA142; padding: 5px; border-radius: 5px; color: white;">{{ category.grouper }} Recipes</h2>  <!-- Display the category title -->
+    
+            <div class="card-container">
+                {% for post in category.list %}
+                    <div class="card mb-3">
+                        <a href="{% url 'post_detail' pk=post.pk %}" class="text-decoration-none">
+                            <img src="{{ post.photo.url }}" class="card-img-top" alt="{{ post.title }}" style="object-fit: cover; height: 200px;">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.categories }}</p>
+                                <span class="card-date">{{ post.published_date }}</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
         {% endfor %}
     </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 All rights reserved. For inquiries, email us at <a href="mailto:nakityojoanita51@gmail.com">inquiries@example.com</a></p>
+        </div>
+    </footer>
+    
 {% endblock %}
