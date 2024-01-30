@@ -5,7 +5,7 @@ from django.utils import timezone
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='recipe_photos/', null=True, blank=True)
+    photo = models.ImageField(blank=True, null=True, upload_to='recipe_photos/')
     ingredients_list = models.TextField()
     instructions = models.TextField()
     cooking_tips = models.TextField(blank=True, null=True)
